@@ -1,0 +1,21 @@
+{
+  "backend/main.mo": "Empty Motoko actor file serving as a placeholder for backend logic.",
+  "feature_evidence.json": "Feature evidence report documenting implemented features for the Verisure retention script interface, including diagnosis screens, navigation branches, and detailed script views with associated files, components, and test IDs.",
+  "frontend-file-summaries.txt": "JSON-formatted summaries of all frontend source files describing their roles in the Verisure retention script application.",
+  "frontend/index.css": "Tailwind CSS configuration with OKLCH color system defining light and dark theme variables for the application, including chart colors for script sections.",
+  "frontend/index.html": "HTML entry point for the Verisure Retention Script Tool application with root div and module script reference.",
+  "frontend/src/App.tsx": "Main React application component rendering header, footer with caffeine.ai attribution, and ScriptNavigator component within a responsive container layout.",
+  "frontend/src/components/Breadcrumb.tsx": "Breadcrumb navigation component displaying the current path through the script hierarchy with clickable items and chevron separators.",
+  "frontend/src/components/DiagnosisScreen.tsx": "Initial diagnosis screen component displaying the main question card and three primary category buttons (FINA, UNHAPPY, NO USE) for navigation.",
+  "frontend/src/components/RefinementScreen.tsx": "Refinement screen component showing subcategory questions with navigation buttons and back functionality for drilling down into script branches.",
+  "frontend/src/components/ScriptDetailView.tsx": "Detailed script view component displaying color-coded sections (diagnosis, questions, reframing, solution, closing) with icons for each script element.",
+  "frontend/src/components/ScriptNavigator.tsx": "Main navigation controller managing state, path tracking, and conditional rendering of diagnosis, refinement, or detail views based on current position in the script tree.",
+  "frontend/src/data/scriptData.ts": "Defines the complete hierarchical script data structure for Verisure retention conversations in Dutch, with branching paths for financial (FINA), dissatisfaction (UNHAPPY), and non-usage (NO USE) scenarios, each containing diagnosis questions, follow-ups, reframing, and solution scripts.",
+  "frontend/src/hooks/useActor.ts": "Custom React hook that manages the backend actor instance using React Query, creating authenticated or anonymous actors based on Internet Identity state and invalidating dependent queries when the actor changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides Internet Identity authentication context and hooks for the application, managing login/logout state, identity persistence, and AuthClient configuration with support for derivation origins.",
+  "frontend/src/index.css": "Tailwind CSS configuration with custom CSS variables defining a comprehensive design system including light/dark themes, color palettes (primary, secondary, muted, accent, destructive), sidebar styling, and chart colors using OKLCH color space.",
+  "frontend/src/main.tsx": "Application entry point that sets up the React root with QueryClientProvider for data fetching and InternetIdentityProvider for authentication, then renders the main App component.",
+  "frontend/src/types/script.ts": "TypeScript type definitions for the script navigation system, defining ScriptNode interface with hierarchical structure (id, title, questions, diagnosis, solution, children) and NavigationPath for breadcrumb tracking.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration extending the default theme with custom colors using OKLCH color space, container settings, Inter font family, custom animations (accordion), and plugins for typography, container queries, and animations.",
+  "project_state.json": "Project metadata documenting the Verisure retention call center script tool, listing implemented features for the interactive decision tree interface with Dutch language support and multi-level branching navigation across financial, dissatisfaction, and non-usage conversation paths."
+}

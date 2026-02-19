@@ -1,0 +1,285 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-frontend-interface-that-displays-the-verisure-retention-script-as-an-interactive-decision-tree-with-clickable-navigation-buttons-for-agents-to-follow-conversation-paths",
+      "featureTitle": "Create a frontend interface that displays the Verisure retention script as an interactive decision tree with clickable navigation buttons for agents to follow conversation paths",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/ScriptNavigator.tsx",
+        "frontend/src/types/script.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-the-initial-diagnosis-screen-that-presents-the-main-question-waarin-zijn-we-u-tekortgekomen-gaat-het-om-het-financi-le-aspect-bent-u-ergens-ontevreden-over-of-gebruikt-u-het-systeem-simpelweg-niet-with-three-clickable-options-fina-financial-unhappy-dissatisfied-and-no-use-no-usage",
+      "featureTitle": "Implement the initial diagnosis screen that presents the main question 'Waarin zijn we u tekortgekomen? Gaat het om het financiële aspect, bent u ergens ontevreden over, of gebruikt u het systeem simpelweg niet?' with three clickable options: FINA (Financial), UNHAPPY (Dissatisfied), and NO USE (No usage)",
+      "files": [
+        "frontend/src/components/DiagnosisScreen.tsx",
+        "frontend/src/data/scriptData.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-the-fina-financial-branch-with-refinement-question-mag-ik-u-vragen-vindt-u-het-bedrag-de-investering-niet-meer-waard-kiest-u-ervoor-om-uw-prioriteiten-anders-te-leggen-of-zit-u-in-een-situatie-waarin-elke-euro-echt-telt-and-three-subcategory-paths-waarde-mismatch-value-mismatch-prioriteitsconflict-priority-conflict-and-financi-le-nood-financial-hardship",
+      "featureTitle": "Build the FINA (Financial) branch with refinement question 'Mag ik u vragen: vindt u het bedrag de investering niet meer waard, kiest u ervoor om uw prioriteiten anders te leggen, of zit u in een situatie waarin elke euro echt telt?' and three subcategory paths: Waarde mismatch (Value mismatch), Prioriteitsconflict (Priority conflict), and Financiële nood (Financial hardship)",
+      "files": [
+        "frontend/src/components/RefinementScreen.tsx",
+        "frontend/src/data/scriptData.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-detailed-script-view-for-waarde-mismatch-1-1-showing-diagnosis-question-three-qualifying-questions-reframing-points-complete-solution-text-and-closing-question-exactly-as-provided-in-the-script",
+      "featureTitle": "Implement detailed script view for Waarde mismatch (1.1) showing diagnosis question, three qualifying questions, reframing points, complete solution text, and closing question exactly as provided in the script",
+      "files": [
+        "frontend/src/components/ScriptDetailView.tsx",
+        "frontend/src/data/scriptData.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-detailed-script-view-for-prioriteitsconflict-1-2-showing-diagnosis-question-three-qualifying-questions-reframing-points-complete-solution-text-and-closing-question-exactly-as-provided-in-the-script",
+      "featureTitle": "Implement detailed script view for Prioriteitsconflict (1.2) showing diagnosis question, three qualifying questions, reframing points, complete solution text, and closing question exactly as provided in the script",
+      "files": [
+        "frontend/src/data/scriptData.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-detailed-script-view-for-financi-le-nood-1-3-showing-diagnosis-question-three-qualifying-questions-reframing-points-complete-solution-text-and-closing-question-exactly-as-provided-in-the-script",
+      "featureTitle": "Implement detailed script view for Financiële nood (1.3) showing diagnosis question, three qualifying questions, reframing points, complete solution text, and closing question exactly as provided in the script",
+      "files": [
+        "frontend/src/data/scriptData.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-the-unhappy-dissatisfied-branch-with-refinement-question-waar-bent-u-precies-ontevreden-over-de-prijs-onze-service-of-het-systeem-zelf-and-three-subcategory-paths-price-service-and-systeem",
+      "featureTitle": "Build the UNHAPPY (Dissatisfied) branch with refinement question 'Waar bent u precies ontevreden over: de prijs, onze service of het systeem zelf?' and three subcategory paths: PRICE, SERVICE, and SYSTEEM",
+      "files": [
+        "frontend/src/data/scriptData.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-detailed-script-views-for-all-three-unhappy-subcategories-2-1-price-2-2-service-2-3-systeem-each-showing-diagnosis-question-three-qualifying-questions-reframing-points-complete-solution-text-and-closing-question-exactly-as-provided-in-the-script",
+      "featureTitle": "Implement detailed script views for all three UNHAPPY subcategories (2.1 PRICE, 2.2 SERVICE, 2.3 SYSTEEM) each showing diagnosis question, three qualifying questions, reframing points, complete solution text, and closing question exactly as provided in the script",
+      "files": [
+        "frontend/src/data/scriptData.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-the-no-use-no-usage-branch-with-refinement-question-gebruikt-u-het-systeem-niet-omdat-uw-situatie-is-veranderd-omdat-u-zelf-maatregelen-heeft-genomen-of-omdat-het-eigenlijk-niet-uw-intentie-was-and-three-main-category-paths-situatie-is-veranderd-situation-changed-zelf-maatregelen-genomen-self-measures-taken-and-niet-mijn-intentie-not-my-intention",
+      "featureTitle": "Build the NO USE (No usage) branch with refinement question 'Gebruikt u het systeem niet omdat uw situatie is veranderd, omdat u zelf maatregelen heeft genomen, of omdat het eigenlijk niet uw intentie was?' and three main category paths: Situatie is veranderd (Situation changed), Zelf maatregelen genomen (Self-measures taken), and Niet mijn intentie (Not my intention)",
+      "files": [
+        "frontend/src/data/scriptData.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-the-situatie-is-veranderd-situation-changed-subsection-with-diagnosis-question-leading-to-three-further-subcategories-ik-ben-vaker-thuis-1-1-er-gebeurt-hier-nooit-wat-1-2-and-de-dreiging-is-weg-1-3-each-with-complete-script-content-including-diagnosis-questions-reframing-solution-and-closing-question",
+      "featureTitle": "Implement the Situatie is veranderd (Situation changed) subsection with diagnosis question leading to three further subcategories: Ik ben vaker thuis (1.1), Er gebeurt hier nooit wat (1.2), and De dreiging is weg (1.3), each with complete script content including diagnosis, questions, reframing, solution, and closing question",
+      "files": [
+        "frontend/src/data/scriptData.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-10"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-the-zelf-maatregelen-genomen-self-measures-taken-subsection-with-diagnosis-question-leading-to-three-subcategories-hond-2-1-camera-2-2-and-rolluiken-hekwerk-hang-en-sluitwerk-2-3-each-with-complete-script-content-including-diagnosis-questions-reframing-solution-and-closing-question",
+      "featureTitle": "Implement the Zelf maatregelen genomen (Self-measures taken) subsection with diagnosis question leading to three subcategories: Hond (2.1), Camera (2.2), and Rolluiken / Hekwerk / Hang- en sluitwerk (2.3), each with complete script content including diagnosis, questions, reframing, solution, and closing question",
+      "files": [
+        "frontend/src/data/scriptData.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-11"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-the-niet-mijn-intentie-not-my-intention-subsection-with-diagnosis-question-leading-to-three-subcategories-agressieve-verkoop-3-1-partner-heeft-het-aangeschaft-3-2-and-nieuwe-woning-beginfase-3-3-each-with-complete-script-content-including-diagnosis-questions-reframing-solution-and-closing-question",
+      "featureTitle": "Implement the Niet mijn intentie (Not my intention) subsection with diagnosis question leading to three subcategories: Agressieve verkoop (3.1), Partner heeft het aangeschaft (3.2), and Nieuwe woning / beginfase (3.3), each with complete script content including diagnosis, questions, reframing, solution, and closing question",
+      "files": [
+        "frontend/src/data/scriptData.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-12"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-breadcrumb-navigation-system-that-shows-the-current-path-through-the-script-hierarchy-e-g-start-no-use-situation-changed-more-often-home-and-allows-clicking-to-navigate-back-to-any-level",
+      "featureTitle": "Add a breadcrumb navigation system that shows the current path through the script hierarchy (e.g., START > NO USE > Situation Changed > More Often Home) and allows clicking to navigate back to any level",
+      "files": [
+        "frontend/src/components/Breadcrumb.tsx",
+        "frontend/src/components/ScriptNavigator.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-13"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-display-all-dutch-text-content-exactly-as-provided-in-the-script-preserving-formatting-quotes-bullet-points-and-special-characters-throughout-the-interface",
+      "featureTitle": "Display all Dutch text content exactly as provided in the script, preserving formatting, quotes, bullet points, and special characters throughout the interface",
+      "files": [
+        "frontend/src/components/ScriptDetailView.tsx",
+        "frontend/src/data/scriptData.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-14"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-clear-visual-design-that-distinguishes-between-different-script-sections-diagnosis-questions-reframing-solution-closing-using-typography-spacing-or-subtle-background-colors-to-improve-readability-for-agents-during-live-calls",
+      "featureTitle": "Implement a clear visual design that distinguishes between different script sections (diagnosis, questions, reframing, solution, closing) using typography, spacing, or subtle background colors to improve readability for agents during live calls",
+      "files": [
+        "frontend/src/components/DiagnosisScreen.tsx",
+        "frontend/src/components/RefinementScreen.tsx",
+        "frontend/src/components/ScriptDetailView.tsx",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-15"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

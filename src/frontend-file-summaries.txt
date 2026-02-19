@@ -1,0 +1,12 @@
+{
+  "frontend/src/App.tsx": "Main application component with header, footer, and ScriptNavigator integration for the Verisure retention script tool.",
+  "frontend/src/types/script.ts": "TypeScript type definitions for ScriptNode (hierarchical script data) and NavigationPath (breadcrumb tracking).",
+  "frontend/src/data/scriptData.ts": "Complete Dutch retention script data structured hierarchically with all categories, subcategories, questions, reframing, solutions, and closing questions.",
+  "frontend/src/components/ScriptNavigator.tsx": "Main navigation controller managing state, path tracking, and rendering appropriate views (diagnosis, refinement, or detail) based on current position.",
+  "frontend/src/components/Breadcrumb.tsx": "Breadcrumb navigation component displaying current path through script hierarchy with clickable navigation.",
+  "frontend/src/components/DiagnosisScreen.tsx": "Initial diagnosis screen displaying the main question with three primary category buttons (FINA, UNHAPPY, NO USE).",
+  "frontend/src/components/RefinementScreen.tsx": "Refinement screen showing subcategory questions with navigation buttons and back functionality.",
+  "frontend/src/components/ScriptDetailView.tsx": "Detailed script view displaying all sections (diagnosis, questions, reframing, solution, closing) with color-coded cards and icons for quick scanning.",
+  "frontend/src/index.css": "Global styles with professional OKLCH color system optimized for call center use with distinct chart colors for script sections.",
+  "frontend/tailwind.config.js": "Tailwind configuration with Inter font family and extended color palette for professional appearance."
+}

@@ -1,0 +1,297 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Interactive Agent Script Navigator - Frontend Implementation",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Create interactive decision tree interface for Verisure retention script navigation",
+      "acceptanceCriteria": [
+        "Agents can click through the script structure from start to end",
+        "Navigation buttons clearly show available customer response options",
+        "Current position in the conversation flow is visually indicated"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Set up main application structure with state management for tracking current script position and navigation history. Implement container for the interactive script navigator component."
+        },
+        {
+          "path": "frontend/src/components/ScriptNavigator.tsx",
+          "operation": "create",
+          "description": "Create the main script navigator component that manages the overall decision tree state, handles navigation between script sections, and renders the current view based on the navigation path."
+        },
+        {
+          "path": "frontend/src/types/script.ts",
+          "operation": "create",
+          "description": "Define TypeScript interfaces for the script data structure including ScriptNode, NavigationPath, ScriptSection types that represent the hierarchical decision tree with diagnosis questions, qualifying questions, reframing points, solutions, and closing questions."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Implement initial diagnosis screen with three main category options",
+      "acceptanceCriteria": [
+        "Main diagnosis question is displayed prominently at the start",
+        "Three primary category buttons are clearly labeled and clickable",
+        "Clicking a category navigates to the corresponding refinement screen"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/DiagnosisScreen.tsx",
+          "operation": "create",
+          "description": "Create the initial diagnosis screen component displaying the question 'Waarin zijn we u tekortgekomen? Gaat het om het financiële aspect, bent u ergens ontevreden over, of gebruikt u het systeem simpelweg niet?' with three prominent navigation buttons labeled FINA (Financial), UNHAPPY (Dissatisfied), and NO USE (No usage). Each button triggers navigation to the corresponding refinement screen."
+        },
+        {
+          "path": "frontend/src/data/scriptData.ts",
+          "operation": "create",
+          "description": "Create the complete script data structure containing all Dutch text content for the entire retention script including the initial diagnosis question and all category paths. Structure the data hierarchically to support up to 4 levels of navigation depth."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Build FINA branch with financial refinement question and three subcategory paths",
+      "acceptanceCriteria": [
+        "Financial refinement question displays when FINA is selected",
+        "Three subcategory buttons navigate to detailed script sections",
+        "Back navigation allows return to main diagnosis"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/RefinementScreen.tsx",
+          "operation": "create",
+          "description": "Create reusable refinement screen component that displays refinement questions with subcategory navigation buttons. For FINA category, display 'Mag ik u vragen: vindt u het bedrag de investering niet meer waard, kiest u ervoor om uw prioriteiten anders te leggen, of zit u in een situatie waarin elke euro echt telt?' with buttons for Waarde mismatch, Prioriteitsconflict, and Financiële nood. Include back navigation functionality."
+        },
+        {
+          "path": "frontend/src/data/scriptData.ts",
+          "operation": "modify",
+          "description": "Add complete FINA branch data including the refinement question and three subcategory definitions (Waarde mismatch, Prioriteitsconflict, Financiële nood) with their corresponding navigation paths."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Implement detailed script view for Waarde mismatch scenario (1.1)",
+      "acceptanceCriteria": [
+        "All script sections (diagnosis, 3 questions, reframing, solution, closing) are displayed",
+        "Text is presented in readable format with proper spacing",
+        "Agent can copy text or navigate to other scenarios"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/ScriptDetailView.tsx",
+          "operation": "create",
+          "description": "Create detailed script view component that displays all sections of a script scenario including diagnosis question, three qualifying questions, reframing points, complete solution text, and closing question. Use clear visual hierarchy with proper spacing and typography to distinguish each section. Make text selectable for copying."
+        },
+        {
+          "path": "frontend/src/data/scriptData.ts",
+          "operation": "modify",
+          "description": "Add complete content for Waarde mismatch (1.1) scenario including diagnosis question, all three qualifying questions, reframing points, solution text, and closing question exactly as provided in the Dutch script."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Implement detailed script view for Prioriteitsconflict scenario (1.2)",
+      "acceptanceCriteria": [
+        "All script sections are displayed with proper formatting",
+        "Content matches the provided Priority conflict scenario exactly",
+        "Navigation allows movement between scenarios"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/data/scriptData.ts",
+          "operation": "modify",
+          "description": "Add complete content for Prioriteitsconflict (1.2) scenario including diagnosis question, all three qualifying questions, reframing points, solution text, and closing question exactly as provided in the Dutch script."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Implement detailed script view for Financiële nood scenario (1.3)",
+      "acceptanceCriteria": [
+        "All script sections are displayed accurately",
+        "Financial hardship scenario content is complete",
+        "Agent can navigate between all financial subcategories"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/data/scriptData.ts",
+          "operation": "modify",
+          "description": "Add complete content for Financiële nood (1.3) scenario including diagnosis question, all three qualifying questions, reframing points, solution text, and closing question exactly as provided in the Dutch script."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Build UNHAPPY branch with dissatisfaction refinement question and three subcategories",
+      "acceptanceCriteria": [
+        "Unhappy refinement question displays when UNHAPPY is selected",
+        "Three subcategory buttons for Price, Service, and System are available",
+        "Navigation flows correctly from main diagnosis to subcategories"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/data/scriptData.ts",
+          "operation": "modify",
+          "description": "Add complete UNHAPPY branch data including the refinement question 'Waar bent u precies ontevreden over: de prijs, onze service of het systeem zelf?' and three subcategory definitions (PRICE, SERVICE, SYSTEEM) with their corresponding navigation paths."
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Implement detailed script views for all three UNHAPPY subcategories (Price, Service, System)",
+      "acceptanceCriteria": [
+        "All three Unhappy scenarios display complete script content",
+        "Text formatting preserves structure of diagnosis, questions, reframing, solution, and closing",
+        "Agent can navigate between Price, Service, and System scenarios"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/data/scriptData.ts",
+          "operation": "modify",
+          "description": "Add complete content for all three UNHAPPY subcategories: 2.1 PRICE, 2.2 SERVICE, and 2.3 SYSTEEM. Each includes diagnosis question, three qualifying questions, reframing points, solution text, and closing question exactly as provided in the Dutch script."
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Build NO USE branch with usage refinement question and three main category paths",
+      "acceptanceCriteria": [
+        "No Use refinement question displays when NO USE is selected",
+        "Three main category buttons navigate to their respective subcategories",
+        "Navigation structure supports the deeper hierarchy of this branch"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/data/scriptData.ts",
+          "operation": "modify",
+          "description": "Add complete NO USE branch data including the refinement question 'Gebruikt u het systeem niet omdat uw situatie is veranderd, omdat u zelf maatregelen heeft genomen, of omdat het eigenlijk niet uw intentie was?' and three main category definitions (Situatie is veranderd, Zelf maatregelen genomen, Niet mijn intentie) supporting deeper hierarchical navigation up to 4 levels."
+        }
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "summary": "Implement Situatie is veranderd subsection with three detailed subcategories",
+      "acceptanceCriteria": [
+        "Situation changed category displays diagnosis question with three subcategory options",
+        "All three subcategories show complete script content",
+        "Multi-level navigation works correctly within the NO USE branch"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/data/scriptData.ts",
+          "operation": "modify",
+          "description": "Add complete Situatie is veranderd subsection including diagnosis question and three subcategories: 1.1 IK BEN VAKER THUIS, 1.2 ER GEBEURT HIER NOOIT WAT, and 1.3 DE DREIGING IS WEG. Each subcategory contains diagnosis question, three qualifying questions, reframing points, solution text, and closing question exactly as provided in the Dutch script."
+        }
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "summary": "Implement Zelf maatregelen genomen subsection with three detailed subcategories",
+      "acceptanceCriteria": [
+        "Self-measures category displays diagnosis question with three subcategory options",
+        "Dog, Camera, and Security measures subcategories each show complete scripts",
+        "Navigation supports moving between all self-measures scenarios"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/data/scriptData.ts",
+          "operation": "modify",
+          "description": "Add complete Zelf maatregelen genomen subsection including diagnosis question and three subcategories: 2.1 HOND, 2.2 CAMERA, and 2.3 ROLLUIKEN / HEKWERK / HANG- EN SLUITWERK. Each subcategory contains diagnosis question, three qualifying questions, reframing points, solution text, and closing question exactly as provided in the Dutch script."
+        }
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "summary": "Implement Niet mijn intentie subsection with three detailed subcategories",
+      "acceptanceCriteria": [
+        "Not my intention category displays diagnosis question with three subcategory options",
+        "Aggressive sales, Partner purchased, and New home subcategories show complete scripts",
+        "All NO USE subcategories are accessible and navigable"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/data/scriptData.ts",
+          "operation": "modify",
+          "description": "Add complete Niet mijn intentie subsection including diagnosis question and three subcategories: 3.1 AGRESSIEVE VERKOOP, 3.2 PARTNER HEEFT HET AANGESCHAFT, and 3.3 NIEUWE WONING / BEGINFASE. Each subcategory contains diagnosis question, three qualifying questions, reframing points, solution text, and closing question exactly as provided in the Dutch script."
+        }
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "summary": "Add breadcrumb navigation system showing current path through script hierarchy",
+      "acceptanceCriteria": [
+        "Breadcrumb trail is visible at all levels of the script",
+        "Each breadcrumb level is clickable and navigates to that section",
+        "Current position is clearly indicated in the breadcrumb"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Breadcrumb.tsx",
+          "operation": "create",
+          "description": "Create breadcrumb navigation component that displays the current path through the script hierarchy (e.g., START > NO USE > Situatie is veranderd > Ik ben vaker thuis). Each level is clickable and navigates back to that section. Highlight the current position visually to help agents track their location in the script."
+        },
+        {
+          "path": "frontend/src/components/ScriptNavigator.tsx",
+          "operation": "modify",
+          "description": "Integrate the Breadcrumb component into the ScriptNavigator, passing the current navigation path and handling breadcrumb click navigation to update the current script position."
+        }
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "summary": "Display all Dutch text content exactly as provided preserving formatting",
+      "acceptanceCriteria": [
+        "All script text appears in Dutch as provided",
+        "Formatting matches the original structure",
+        "No text is truncated or altered"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/data/scriptData.ts",
+          "operation": "modify",
+          "description": "Verify all Dutch text content is included exactly as provided in the original script, preserving all formatting, quotes, bullet points, and special characters. Ensure no text is truncated or altered throughout the entire script hierarchy."
+        },
+        {
+          "path": "frontend/src/components/ScriptDetailView.tsx",
+          "operation": "modify",
+          "description": "Ensure the ScriptDetailView component preserves all text formatting from the data structure including line breaks, bullet points, quotes, and special characters when rendering Dutch content."
+        }
+      ]
+    },
+    {
+      "id": "REQ-15",
+      "summary": "Implement clear visual design distinguishing script sections for quick scanning",
+      "acceptanceCriteria": [
+        "Script sections are visually distinct and easy to scan",
+        "Design supports quick reading during calls",
+        "Interface feels professional and calm, suitable for customer service context"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/ScriptDetailView.tsx",
+          "operation": "modify",
+          "description": "Apply visual design that clearly distinguishes between script sections (diagnosis, questions, reframing, solution, closing) using typography hierarchy, spacing, and subtle background colors. Optimize for quick scanning during live calls with a professional, calm design suitable for customer service."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add global styling for the script navigator interface with a professional color palette suitable for customer service. Define typography styles that support quick readability during calls and ensure sufficient spacing between elements for easy scanning."
+        },
+        {
+          "path": "frontend/src/components/DiagnosisScreen.tsx",
+          "operation": "modify",
+          "description": "Apply consistent visual styling to the diagnosis screen with clear, prominent buttons and professional design that matches the overall interface aesthetic."
+        },
+        {
+          "path": "frontend/src/components/RefinementScreen.tsx",
+          "operation": "modify",
+          "description": "Apply consistent visual styling to refinement screens ensuring navigation buttons are clear and the layout supports quick decision-making during customer interactions."
+        }
+      ]
+    }
+  ]
+}

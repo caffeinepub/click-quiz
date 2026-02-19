@@ -1,0 +1,298 @@
+{
+  "kind": "build_request",
+  "title": "Build Interactive Agent Script Navigator",
+  "projectName": "Agent Script Navigator",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a frontend interface that displays the Verisure retention script as an interactive decision tree with clickable navigation buttons for agents to follow conversation paths",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "maak een script waar agents kunnen klikken en dan gelijk weten wat ze moeten zeggen"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Agents can click through the script structure from start to end",
+        "Navigation buttons clearly show available customer response options",
+        "Current position in the conversation flow is visually indicated"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Implement the initial diagnosis screen that presents the main question 'Waarin zijn we u tekortgekomen? Gaat het om het financiële aspect, bent u ergens ontevreden over, of gebruikt u het systeem simpelweg niet?' with three clickable options: FINA (Financial), UNHAPPY (Dissatisfied), and NO USE (No usage)",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "🧭 0️⃣ START – ALGEMENE DIAGNOSE"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Main diagnosis question is displayed prominently at the start",
+        "Three primary category buttons are clearly labeled and clickable",
+        "Clicking a category navigates to the corresponding refinement screen"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Build the FINA (Financial) branch with refinement question 'Mag ik u vragen: vindt u het bedrag de investering niet meer waard, kiest u ervoor om uw prioriteiten anders te leggen, of zit u in een situatie waarin elke euro echt telt?' and three subcategory paths: Waarde mismatch (Value mismatch), Prioriteitsconflict (Priority conflict), and Financiële nood (Financial hardship)",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "1️⃣ FINA – FINANCIEEL"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Financial refinement question displays when FINA is selected",
+        "Three subcategory buttons navigate to detailed script sections",
+        "Back navigation allows return to main diagnosis"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Implement detailed script view for Waarde mismatch (1.1) showing diagnosis question, three qualifying questions, reframing points, complete solution text, and closing question exactly as provided in the script",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "1.1 WAARDE MISMATCH"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All script sections (diagnosis, 3 questions, reframing, solution, closing) are displayed",
+        "Text is presented in readable format with proper spacing",
+        "Agent can copy text or navigate to other scenarios"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Implement detailed script view for Prioriteitsconflict (1.2) showing diagnosis question, three qualifying questions, reframing points, complete solution text, and closing question exactly as provided in the script",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "1.2 PRIORITEITSCONFLICT"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All script sections are displayed with proper formatting",
+        "Content matches the provided Priority conflict scenario exactly",
+        "Navigation allows movement between scenarios"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Implement detailed script view for Financiële nood (1.3) showing diagnosis question, three qualifying questions, reframing points, complete solution text, and closing question exactly as provided in the script",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "1.3 FINANCIËLE NOOD"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All script sections are displayed accurately",
+        "Financial hardship scenario content is complete",
+        "Agent can navigate between all financial subcategories"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Build the UNHAPPY (Dissatisfied) branch with refinement question 'Waar bent u precies ontevreden over: de prijs, onze service of het systeem zelf?' and three subcategory paths: PRICE, SERVICE, and SYSTEEM",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "2️⃣ UNHAPPY – ONTEVREDEN"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Unhappy refinement question displays when UNHAPPY is selected",
+        "Three subcategory buttons for Price, Service, and System are available",
+        "Navigation flows correctly from main diagnosis to subcategories"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Implement detailed script views for all three UNHAPPY subcategories (2.1 PRICE, 2.2 SERVICE, 2.3 SYSTEEM) each showing diagnosis question, three qualifying questions, reframing points, complete solution text, and closing question exactly as provided in the script",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "2.1 PRICE",
+          "2.2 SERVICE",
+          "2.3 SYSTEEM"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All three Unhappy scenarios display complete script content",
+        "Text formatting preserves structure of diagnosis, questions, reframing, solution, and closing",
+        "Agent can navigate between Price, Service, and System scenarios"
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Build the NO USE (No usage) branch with refinement question 'Gebruikt u het systeem niet omdat uw situatie is veranderd, omdat u zelf maatregelen heeft genomen, of omdat het eigenlijk niet uw intentie was?' and three main category paths: Situatie is veranderd (Situation changed), Zelf maatregelen genomen (Self-measures taken), and Niet mijn intentie (Not my intention)",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "3️⃣ NO USE – GEEN GEBRUIK"
+        ]
+      },
+      "acceptanceCriteria": [
+        "No Use refinement question displays when NO USE is selected",
+        "Three main category buttons navigate to their respective subcategories",
+        "Navigation structure supports the deeper hierarchy of this branch"
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "text": "Implement the Situatie is veranderd (Situation changed) subsection with diagnosis question leading to three further subcategories: Ik ben vaker thuis (1.1), Er gebeurt hier nooit wat (1.2), and De dreiging is weg (1.3), each with complete script content including diagnosis, questions, reframing, solution, and closing question",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "1️⃣ SITUATIE IS VERANDERD",
+          "1.1 IK BEN VAKER THUIS",
+          "1.2 ER GEBEURT HIER NOOIT WAT",
+          "1.3 DE DREIGING IS WEG"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Situation changed category displays diagnosis question with three subcategory options",
+        "All three subcategories show complete script content",
+        "Multi-level navigation works correctly within the NO USE branch"
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "text": "Implement the Zelf maatregelen genomen (Self-measures taken) subsection with diagnosis question leading to three subcategories: Hond (2.1), Camera (2.2), and Rolluiken / Hekwerk / Hang- en sluitwerk (2.3), each with complete script content including diagnosis, questions, reframing, solution, and closing question",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "2️⃣ ZELF MAATREGELEN GENOMEN",
+          "2.1 HOND",
+          "2.2 CAMERA",
+          "2.3 ROLLUIKEN / HEKWERK / HANG- EN SLUITWERK"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Self-measures category displays diagnosis question with three subcategory options",
+        "Dog, Camera, and Security measures subcategories each show complete scripts",
+        "Navigation supports moving between all self-measures scenarios"
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "text": "Implement the Niet mijn intentie (Not my intention) subsection with diagnosis question leading to three subcategories: Agressieve verkoop (3.1), Partner heeft het aangeschaft (3.2), and Nieuwe woning / beginfase (3.3), each with complete script content including diagnosis, questions, reframing, solution, and closing question",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "3️⃣ NIET MIJN INTENTIE",
+          "3.1 AGRESSIEVE VERKOOP",
+          "3.2 PARTNER HEEFT HET AANGESCHAFT",
+          "3.3 NIEUWE WONING / BEGINFASE"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Not my intention category displays diagnosis question with three subcategory options",
+        "Aggressive sales, Partner purchased, and New home subcategories show complete scripts",
+        "All NO USE subcategories are accessible and navigable"
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "text": "Add a breadcrumb navigation system that shows the current path through the script hierarchy (e.g., START > NO USE > Situation Changed > More Often Home) and allows clicking to navigate back to any level",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Breadcrumb trail is visible at all levels of the script",
+        "Each breadcrumb level is clickable and navigates to that section",
+        "Current position is clearly indicated in the breadcrumb"
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "text": "Display all Dutch text content exactly as provided in the script, preserving formatting, quotes, bullet points, and special characters throughout the interface",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All script text appears in Dutch as provided",
+        "Formatting matches the original structure",
+        "No text is truncated or altered"
+      ]
+    },
+    {
+      "id": "REQ-15",
+      "text": "Implement a clear visual design that distinguishes between different script sections (diagnosis, questions, reframing, solution, closing) using typography, spacing, or subtle background colors to improve readability for agents during live calls",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Script sections are visually distinct and easy to scan",
+        "Design supports quick reading during calls",
+        "Interface feels professional and calm, suitable for customer service context"
+      ]
+    }
+  ],
+  "constraints": [
+    "All script text must be displayed in Dutch exactly as provided",
+    "Navigation must support the hierarchical structure with up to 4 levels deep (START > Main Category > Subcategory > Sub-subcategory)",
+    "Interface must be optimized for quick scanning during live customer calls"
+  ],
+  "nonGoals": [
+    "Audio or video call integration",
+    "CRM or customer database integration",
+    "Call recording or logging functionality",
+    "Multi-language support beyond Dutch",
+    "User authentication or agent accounts",
+    "Editing or customizing the script content",
+    "Analytics or usage tracking"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

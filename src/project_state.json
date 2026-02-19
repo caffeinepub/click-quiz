@@ -1,0 +1,187 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Interactive call center script tool for Verisure retention agents - Dutch language script with branching decision tree for customer retention conversations",
+  "architectural_notes": [
+    "Dutch language interface required",
+    "Multi-level branching navigation (3-4 levels deep)",
+    "Script content organized hierarchically: main categories → subcategories → detailed scripts",
+    "Each node contains: diagnosis question, 3 follow-up questions, reframing text, full solution script, closing question"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-frontend-interface-that-displays-the-verisure-retention-script-as-an-interactive-decision-tree-with-clickable-navigation-buttons-for-agents-to-follow-conversation-paths",
+      "title": "Create a frontend interface that displays the Verisure retention script as an interactive decision tree with clickable navigation buttons for agents to follow conversation paths",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-initial-diagnosis-screen-that-presents-the-main-question-waarin-zijn-we-u-tekortgekomen-gaat-het-om-het-financi-le-aspect-bent-u-ergens-ontevreden-over-of-gebruikt-u-het-systeem-simpelweg-niet-with-three-clickable-options-fina-financial-unhappy-dissatisfied-and-no-use-no-usage",
+      "title": "Implement the initial diagnosis screen that presents the main question 'Waarin zijn we u tekortgekomen? Gaat het om het financiële aspect, bent u ergens ontevreden over, of gebruikt u het systeem simpelweg niet?' with three clickable options: FINA (Financial), UNHAPPY (Dissatisfied), and NO USE (No usage)",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-fina-financial-branch-with-refinement-question-mag-ik-u-vragen-vindt-u-het-bedrag-de-investering-niet-meer-waard-kiest-u-ervoor-om-uw-prioriteiten-anders-te-leggen-of-zit-u-in-een-situatie-waarin-elke-euro-echt-telt-and-three-subcategory-paths-waarde-mismatch-value-mismatch-prioriteitsconflict-priority-conflict-and-financi-le-nood-financial-hardship",
+      "title": "Build the FINA (Financial) branch with refinement question 'Mag ik u vragen: vindt u het bedrag de investering niet meer waard, kiest u ervoor om uw prioriteiten anders te leggen, of zit u in een situatie waarin elke euro echt telt?' and three subcategory paths: Waarde mismatch (Value mismatch), Prioriteitsconflict (Priority conflict), and Financiële nood (Financial hardship)",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-detailed-script-view-for-waarde-mismatch-1-1-showing-diagnosis-question-three-qualifying-questions-reframing-points-complete-solution-text-and-closing-question-exactly-as-provided-in-the-script",
+      "title": "Implement detailed script view for Waarde mismatch (1.1) showing diagnosis question, three qualifying questions, reframing points, complete solution text, and closing question exactly as provided in the script",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-detailed-script-view-for-prioriteitsconflict-1-2-showing-diagnosis-question-three-qualifying-questions-reframing-points-complete-solution-text-and-closing-question-exactly-as-provided-in-the-script",
+      "title": "Implement detailed script view for Prioriteitsconflict (1.2) showing diagnosis question, three qualifying questions, reframing points, complete solution text, and closing question exactly as provided in the script",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-detailed-script-view-for-financi-le-nood-1-3-showing-diagnosis-question-three-qualifying-questions-reframing-points-complete-solution-text-and-closing-question-exactly-as-provided-in-the-script",
+      "title": "Implement detailed script view for Financiële nood (1.3) showing diagnosis question, three qualifying questions, reframing points, complete solution text, and closing question exactly as provided in the script",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-unhappy-dissatisfied-branch-with-refinement-question-waar-bent-u-precies-ontevreden-over-de-prijs-onze-service-of-het-systeem-zelf-and-three-subcategory-paths-price-service-and-systeem",
+      "title": "Build the UNHAPPY (Dissatisfied) branch with refinement question 'Waar bent u precies ontevreden over: de prijs, onze service of het systeem zelf?' and three subcategory paths: PRICE, SERVICE, and SYSTEEM",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-detailed-script-views-for-all-three-unhappy-subcategories-2-1-price-2-2-service-2-3-systeem-each-showing-diagnosis-question-three-qualifying-questions-reframing-points-complete-solution-text-and-closing-question-exactly-as-provided-in-the-script",
+      "title": "Implement detailed script views for all three UNHAPPY subcategories (2.1 PRICE, 2.2 SERVICE, 2.3 SYSTEEM) each showing diagnosis question, three qualifying questions, reframing points, complete solution text, and closing question exactly as provided in the script",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-no-use-no-usage-branch-with-refinement-question-gebruikt-u-het-systeem-niet-omdat-uw-situatie-is-veranderd-omdat-u-zelf-maatregelen-heeft-genomen-of-omdat-het-eigenlijk-niet-uw-intentie-was-and-three-main-category-paths-situatie-is-veranderd-situation-changed-zelf-maatregelen-genomen-self-measures-taken-and-niet-mijn-intentie-not-my-intention",
+      "title": "Build the NO USE (No usage) branch with refinement question 'Gebruikt u het systeem niet omdat uw situatie is veranderd, omdat u zelf maatregelen heeft genomen, of omdat het eigenlijk niet uw intentie was?' and three main category paths: Situatie is veranderd (Situation changed), Zelf maatregelen genomen (Self-measures taken), and Niet mijn intentie (Not my intention)",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-situatie-is-veranderd-situation-changed-subsection-with-diagnosis-question-leading-to-three-further-subcategories-ik-ben-vaker-thuis-1-1-er-gebeurt-hier-nooit-wat-1-2-and-de-dreiging-is-weg-1-3-each-with-complete-script-content-including-diagnosis-questions-reframing-solution-and-closing-question",
+      "title": "Implement the Situatie is veranderd (Situation changed) subsection with diagnosis question leading to three further subcategories: Ik ben vaker thuis (1.1), Er gebeurt hier nooit wat (1.2), and De dreiging is weg (1.3), each with complete script content including diagnosis, questions, reframing, solution, and closing question",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-zelf-maatregelen-genomen-self-measures-taken-subsection-with-diagnosis-question-leading-to-three-subcategories-hond-2-1-camera-2-2-and-rolluiken-hekwerk-hang-en-sluitwerk-2-3-each-with-complete-script-content-including-diagnosis-questions-reframing-solution-and-closing-question",
+      "title": "Implement the Zelf maatregelen genomen (Self-measures taken) subsection with diagnosis question leading to three subcategories: Hond (2.1), Camera (2.2), and Rolluiken / Hekwerk / Hang- en sluitwerk (2.3), each with complete script content including diagnosis, questions, reframing, solution, and closing question",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-niet-mijn-intentie-not-my-intention-subsection-with-diagnosis-question-leading-to-three-subcategories-agressieve-verkoop-3-1-partner-heeft-het-aangeschaft-3-2-and-nieuwe-woning-beginfase-3-3-each-with-complete-script-content-including-diagnosis-questions-reframing-solution-and-closing-question",
+      "title": "Implement the Niet mijn intentie (Not my intention) subsection with diagnosis question leading to three subcategories: Agressieve verkoop (3.1), Partner heeft het aangeschaft (3.2), and Nieuwe woning / beginfase (3.3), each with complete script content including diagnosis, questions, reframing, solution, and closing question",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-breadcrumb-navigation-system-that-shows-the-current-path-through-the-script-hierarchy-e-g-start-no-use-situation-changed-more-often-home-and-allows-clicking-to-navigate-back-to-any-level",
+      "title": "Add a breadcrumb navigation system that shows the current path through the script hierarchy (e.g., START > NO USE > Situation Changed > More Often Home) and allows clicking to navigate back to any level",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-all-dutch-text-content-exactly-as-provided-in-the-script-preserving-formatting-quotes-bullet-points-and-special-characters-throughout-the-interface",
+      "title": "Display all Dutch text content exactly as provided in the script, preserving formatting, quotes, bullet points, and special characters throughout the interface",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-clear-visual-design-that-distinguishes-between-different-script-sections-diagnosis-questions-reframing-solution-closing-using-typography-spacing-or-subtle-background-colors-to-improve-readability-for-agents-during-live-calls",
+      "title": "Implement a clear visual design that distinguishes between different script sections (diagnosis, questions, reframing, solution, closing) using typography, spacing, or subtle background colors to improve readability for agents during live calls",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Interactive clickable script interface with branching logic for retention conversations",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Three main categories: Financial (FINA), Unhappy (UNHAPPY), No Use (NO USE)",
+      "reqIds": [
+        "AR-1"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Financial subcategories: Value mismatch, Priority conflict, Financial hardship with diagnosis questions and solutions",
+      "reqIds": [
+        "AR-2"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Unhappy subcategories: Price, Service, System with diagnosis questions and solutions",
+      "reqIds": [
+        "AR-2"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "No Use subcategories: Situation changed, Self-measures taken, Not my intention with diagnosis questions and solutions",
+      "reqIds": [
+        "AR-2"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Display full script content including diagnosis questions, reframing points, complete solutions and closing questions for each scenario",
+      "reqIds": [
+        "AR-1"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Verisure Retention Script Tool",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
